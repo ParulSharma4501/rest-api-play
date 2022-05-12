@@ -1,0 +1,42 @@
+
+@(employees:Seq[models.Employee])
+
+@import play.api.libs.json.Json
+
+
+@main("HR Mangagement System") {
+    <html>
+      <head>
+          <title>title</title>
+           <link rel="stylesheet" media="screen" href="../../public/stylesheets/main.css">
+      </head>
+<body>
+<div id="div1"></div>
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <script> 
+ var obj={}
+
+var tbl=$("<table/>").attr("id","mytable");
+$("#div1").append(tbl);
+for(var i=0;i<3;i++)
+{
+    var tr="<tr>";
+    var td1="<td>"+obj[i]["_id"]+"</td>";
+    var td2="<td>"+obj[i]["name"]+"</td>";
+    var td3="<td>"+obj[i]["email"]+"</td></tr>";
+    
+   $("#mytable").append(tr+td1+td2+td3); 
+  
+}
+ 
+ </script>
+</body>
+    </html>
+   
+
+}
